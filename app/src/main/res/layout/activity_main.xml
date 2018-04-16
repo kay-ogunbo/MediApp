@@ -1,95 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
     tools:context="com.android.prod.mediapp.view.activity.MainActivity">
 
 
-    <View
-        android:id="@+id/fabBGLayout"
+    <com.github.jhonnyx2012.horizontalpicker.HorizontalPicker
+        android:id="@+id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_red"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorTransBg"
-        android:visibility="gone"/>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        fab:menu_fab_size="normal"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true"
+        fab:menu_backgroundColor="#ccffffff">
 
-    <LinearLayout
-        android:id="@+id/fabLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="23dp"
-        app:layout_behavior="com.android.prod.mediapp.util.MoveUpwardBehavior"
-        android:padding="12dp"
-        android:clipToPadding="false"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="23dp"
-        android:layout_gravity="bottom|end"
-        android:visibility="gone">
-
-        <TextView
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Reminder"/>
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab_Add_Reminder"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_margin="21dp"
-            android:layout_marginLeft="10dp"
             android:src="@drawable/ic_add_black_24dp"
-            app:fabSize="mini"/>
-    </LinearLayout>
+            fab:fab_size="mini"
+            fab:fab_label="Add New Medication" />
 
-    <LinearLayout
-        android:id="@+id/fabLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="12dp"
-        app:layout_behavior="com.android.prod.mediapp.util.MoveUpwardBehavior"
-        android:clipToPadding="false"
-        android:layout_marginRight="23dp"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="23dp"
-        android:layout_gravity="bottom|end"
-        android:visibility="gone">
-
-        <TextView
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Edit Reminder"/>
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab_Edit_Reminder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_margin="21dp"
             android:src="@drawable/ic_edit_black_24dp"
-            app:fabSize="mini"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginRight="16dp"
-        android:gravity="center_vertical"
-        app:layout_behavior="com.android.prod.mediapp.util.MoveUpwardBehavior"
-        android:clipToPadding="false"
-        android:padding="12dp"
-        android:layout_marginBottom="16dp"
-        android:layout_gravity="bottom|end">
+            fab:fab_size="mini"
+            fab:fab_label="Edit Medication" />
 
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:gravity="center_vertical"
-            android:src="@drawable/ic_add_circle_black_24dp"
-            app:fabSize="normal"/>
-    </LinearLayout>
-</android.support.design.widget.CoordinatorLayout>
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>
